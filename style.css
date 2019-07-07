@@ -4,6 +4,12 @@ body {
   font-family:'Montserrat';
 }
 
+button {
+  background-color:#0f6cff;
+  border-radius: 12px;
+  color:white;
+}
+
 #username {
   display: inline-block;
   color:white;

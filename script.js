@@ -3,7 +3,7 @@ const proxy = "https://cors-anywhere.herokuapp.com/";
 const home = "https://scratch.mit.edu";
 const api = "https://api.scratch.mit.edu";
 
-var user = "HowToLogic";
+var user = "griffpatch";
 
 var response = "";
 

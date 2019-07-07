@@ -35,7 +35,7 @@ function request(url,callback) {
 
 /* set info */
 
-// User ID, Location, Joined
+// User ID, Location, Joined, Bio, Status
 request(proxy+api+"/users/"+user, function() {
   var data = JSON.parse(response);
 
@@ -49,7 +49,12 @@ request(proxy+api+"/users/"+user, function() {
 
   document.getElementById("userjoined").innerHTML = "Joined: "+data.history.joined.split("T")[0];
 
-  document.getElementById("userprofilepic").src = data.profile.images["90x90"];}catch(err){}
+  document.getElementById("userprofilepic").src = data.profile.images["90x90"];
+  
+  document.getElementById("bio").innerHTML = data.profile.bio;
+  
+  document.getElementById("status").innerHTML = data.profile.status;
+  }catch(err){}
 })
 
 // User Messages
@@ -136,21 +141,21 @@ getAllprojects(0);
 var complete = 0;
 function totalstats() {
   // get remixes
-  try{
-  for(var i = 0;i<projids.length;i++){
-    request("https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/projects/"+projids[i]+"/remixtree/bare/",function(){
-      complete += 1;
-      if(response != "no data") {
-        var remixdata = JSON.parse(response);
-        totalremixes += Object.keys(remixdata).length;
-      }
-  
-      if (complete == projids.length) {
-        document.getElementById("totalremixes").innerHTML = "Remixes: "+totalremixes;
-      }
-  
-  })
-  }}catch(err){}
+  //try{
+  //for(var i = 0;i<projids.length;i++){
+  //  request("https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/projects/"+projids[i]+"/remixtree/bare/",function(){
+  //    complete += 1;
+  //    if(response != "no data") {
+  //      var remixdata = JSON.parse(response);
+  //      totalremixes += Object.keys(remixdata).length;
+  //    }
+  //
+  //    if (complete == projids.length) {
+  //      document.getElementById("totalremixes").innerHTML = "Remixes: "+totalremixes;
+  //    }
+  //
+  //})
+  //}}catch(err){}
   // put totalstats in
   try{
   document.getElementById("totalloves").innerHTML = "Loves: "+totalloves;

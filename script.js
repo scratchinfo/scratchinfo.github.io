@@ -16,6 +16,7 @@ var totalfavorites = 0;
 var totalremixes = 0;
 var totalviews = 0;
 var totalcomments = 0;
+var totalprojects = 0;
 
 /* 
 request
@@ -122,7 +123,8 @@ function getAllprojects(off) {
       totalcomments += data[i].stats.comments;
       projids.push(data[i]["id"]);
     }
-
+    
+    totalprojects += data.length;
     if (data.length == 20) {
       getAllprojects(off+20);
     } else {
@@ -162,5 +164,6 @@ function totalstats() {
   document.getElementById("totalfavorites").innerHTML = "Favorites: "+totalfavorites;
   
   document.getElementById("totalviews").innerHTML = "Views: "+totalviews;
-  document.getElementById("totalcomments").innerHTML = "Comments: "+totalcomments;}catch(err){alert(err)}
+  document.getElementById("totalcomments").innerHTML = "Comments: "+totalcomments;
+  document.getElementById("totalprojects").innerHTML = "Projects created by User: "+totalpojects;}catch(err){alert(err)}
 }

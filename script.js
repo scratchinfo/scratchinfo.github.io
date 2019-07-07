@@ -6,6 +6,7 @@ const api = "https://api.scratch.mit.edu";
 var user = location.hash.substr(1,location.hash.length);
 if (location.hash == NaN || location.hash == undefined || location.hash == "" || location.hash == "#") {
   location.hash = "griffpatch";
+  location.reload();
 }
 
 var response = "";

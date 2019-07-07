@@ -28,6 +28,7 @@ body {
 }
 
 #statushold {
+  overflow: hidden;
   background-color:#0f6cff;
   margin-left:5%;
   margin-right:5%;

@@ -16,7 +16,7 @@
       <img src="https://www.macmillandictionary.com/external/slideshow/full/Grey_full.png" id="userprofilepic">
       <h1 id="username">Username</h1>
       <br>
-      <button onclick="switchuser()">Switch User</button>
+      <button onclick="switchuser()">Switch User</button><button onclick="window.open('https://scratch.mit.edu/users/'+user)">View on Scratch</button>
       <br>
     </div>
 
@@ -71,7 +71,7 @@
         var n = window.prompt("New User: ")
         if (n != "") {
           location.hash = n;
-          window.reload();
+          location.reload();
         }
       }
     </script>

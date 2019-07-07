@@ -165,5 +165,5 @@ function totalstats() {
   
   document.getElementById("totalviews").innerHTML = "Views: "+totalviews;
   document.getElementById("totalcomments").innerHTML = "Comments: "+totalcomments;
-  document.getElementById("totalprojects").innerHTML = "Projects created by User: "+totalpojects;}catch(err){alert(err)}
+  document.getElementById("totalprojects").innerHTML = "Projects created by User: "+totalprojects;}catch(err){alert(err)}
 }

@@ -146,16 +146,16 @@ function totalstats() {
       }
   
       if (complete == projids.length) {
-        document.getElementById("totalremixes").innerHTML = totalremixes;
+        document.getElementById("totalremixes").innerHTML = "Remixes: "+totalremixes;
       }
   
   })
   }}catch(err){}
   // put totalstats in
   try{
-  document.getElementById("totalloves").innerHTML = totalloves;
-  document.getElementById("totalfavorites").innerHTML = totalfavorites;
+  document.getElementById("totalloves").innerHTML = "Loves: "+totalloves;
+  document.getElementById("totalfavorites").innerHTML = "Favorites: "+totalfavorites;
   
-  document.getElementById("totalviews").innerHTML = totalviews;
-  document.getElementById("totalcomments").innerHTML = totalcomments;}catch(err){alert(err)}
+  document.getElementById("totalviews").innerHTML = "Views: "+totalviews;
+  document.getElementById("totalcomments").innerHTML = "Comments: "+totalcomments;}catch(err){alert(err)}
 }

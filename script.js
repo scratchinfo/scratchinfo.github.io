@@ -3,8 +3,8 @@ const proxy = "https://cors-anywhere.herokuapp.com/";
 const home = "https://scratch.mit.edu";
 const api = "https://api.scratch.mit.edu";
 
-var user = location.hash;
-if (location.hash == NaN || location.hash == undefined || location.hash == "") {
+var user = location.hash.substr(1,location.hash.length);
+if (location.hash == NaN || location.hash == undefined || location.hash == "" || location.hash == "#") {
   location.hash = "griffpatch";
 }
 

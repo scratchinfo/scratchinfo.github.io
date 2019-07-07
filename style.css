@@ -5,6 +5,8 @@ body {
 }
 
 button {
+  border: none;
+  padding:10px;
   background-color:#0f6cff;
   border-radius: 12px;
   color:white;

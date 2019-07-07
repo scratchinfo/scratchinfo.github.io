@@ -27,6 +27,19 @@ body {
   padding:20px;
 }
 
+#statushold {
+  background-color:#0f6cff;
+  margin-left:5%;
+  margin-right:5%;
+  border-radius: 12px;
+  padding:10px;
+}
+
+#aboutme, #wiwo {
+  float:left;
+  width:50%;
+}
+
 #headuser {
   background-color:#3984fa;
   box-shadow: 0px 5px 18px #888888;
